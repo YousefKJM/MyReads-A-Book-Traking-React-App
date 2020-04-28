@@ -4,16 +4,25 @@ In the MyReads project, I created a bookshelf app that allows you to select and 
 
 The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+## Installation
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+Clone the repository, change directories, and use NPM to install the dependencies.
 
-## TL;DR
+```bash
+$ git clone https://github.com/YousefKJM/MyReads-A-Book-Traking-React-App.git
+$ cd MyReads-A-Book-Traking-React-App
+$ npm install
+```
 
-To get started developing right away:
+## Usage
 
-- install all project dependencies with `npm install`
-- start the development server with `npm start`
+The project can be run with
+
+- `npm start`
+
+The project can be viewed in the browser at
+
+- [http://localhost:3000](http://localhost:3000)
 
 ## What You're Getting
 
@@ -26,6 +35,11 @@ To get started developing right away:
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
+    ├── components
+    │   ├── Book.js # Book component is responsible for the display of the book and is where some of the functionality of changing the books state is stored.
+    │   ├── BookSearch.js # BookSearch component essentially takes care of all of the search functionality.
+    │   ├── BookShelf.js # BookShelf component is much like the ListBooks Component except it takes in all of the books assigned to that book shelf and maps them into the Book component.
+    │   └── ListBooks.js # ListBooks component simply is a place to store the three different Shelf components
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
@@ -38,11 +52,9 @@ To get started developing right away:
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
 ## Backend Server
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+To simplify your development process, Udacity in React ND provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
 - [`getAll`](#getall)
 - [`update`](#update)
