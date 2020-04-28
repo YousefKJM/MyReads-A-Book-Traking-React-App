@@ -41,7 +41,7 @@ class BooksApp extends React.Component {
 					render={() => (
 						<div className="list-books">
 							<div className="list-books-title">
-								<h1>MyReads</h1>
+								<h1>MyReads - Yousef Majeed</h1>
 							</div>
 							<ListBooks
 								books={this.state.books}
