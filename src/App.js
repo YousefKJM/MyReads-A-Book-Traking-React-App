@@ -31,7 +31,6 @@ class BooksApp extends React.Component {
 						</div>
 					)}
 				/>
-
 				<Route
 					path="/search"
 					render={() => (
