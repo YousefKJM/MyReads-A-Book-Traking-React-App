@@ -12,6 +12,8 @@ It also allow you to search for books based on title and author.
 
 The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
+- **Live Demo:** [https://myreads-stage.herokuapp.com/](https://myreads-stage.herokuapp.com/)
+
 ## Installation
 
 Clone the repository, change directories, and use NPM to install the dependencies.
