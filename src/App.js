@@ -1,5 +1,5 @@
 import React from "react";
-// import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
 import BookSearch from "./components/BookSearch";
@@ -8,6 +8,28 @@ import ListBooks from "./components/ListBooks";
 class BooksApp extends React.Component {
 	state = {
 		books: [],
+	};
+
+	//will get our initial state of the page by getting all books
+	//then filtering them out by their respective states
+	componentDidMount() {
+		BooksAPI.getAll().then((books) => {
+			this.setState({
+				books: books,
+			});
+		});
+	}
+
+	moveBookShelf = (book, newValue) => {
+		book.props.book.shelf = newValue;
+
+		this.setState((state) => ({
+			books: state.books
+				.filter((b) => b.id !== book.props.book.id)
+				.concat([book.props.book]),
+		}));
+
+		BooksAPI.update(book.props.book, newValue);
 	};
 
 	render() {
