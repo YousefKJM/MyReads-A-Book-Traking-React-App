@@ -56,7 +56,7 @@ class Book extends Component {
 							defaultValue={this.props.book.shelf}
 						>
 							<option value="none" disabled>
-								Move to...
+								Move to..
 							</option>
 							<option value="currentlyReading">Currently Reading</option>
 							<option value="wantToRead">Want to Read</option>
