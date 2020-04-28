@@ -2,33 +2,63 @@ import React from "react";
 // import * as BooksAPI from './BooksAPI'
 import "./App.css";
 import { Route, Link } from "react-router-dom";
+import BookSearch from "./components/BookSearch";
+import ListBooks from "./components/ListBooks";
 
 class BooksApp extends React.Component {
-	state = {};
+	state = {
+		books: [],
+	};
 
 	render() {
 		return (
 			<div className="app">
-				<Route exact path="/" component={BookList} />
-				<Route path="/search" component={BookSearch} />
+				<Route
+					exact
+					path="/"
+					render={() => (
+						<div className="list-books">
+							<div className="list-books-title">
+								<h1>MyReads</h1>
+							</div>
+							<ListBooks
+								books={this.state.books}
+								onBookShelfChange={this.moveBookShelf}
+							/>
+							<div className="open-search">
+								<Link to="/search">Add a book</Link>
+							</div>
+						</div>
+					)}
+				/>
+
+				<Route
+					path="/search"
+					render={() => (
+						<BookSearch
+							bsBooks={this.state.books}
+							onBookShelfChange={this.moveBookShelf}
+						/>
+					)}
+				/>
 			</div>
 		);
 	}
 }
 
-class BookList extends React.Component {
-	render() {
-		return <div className="list-books">{/* UI code */}</div>;
-	}
-}
-
-class BookSearch extends React.Component {
-	render() {
-		return <div className="search-books">{/* UI code */}</div>;
-	}
-}
-
 export default BooksApp;
+
+// class BookList extends React.Component {
+// 	render() {
+// 		return <div className="list-books">{/* UI code */}</div>;
+// 	}
+// }
+
+// class BookSearch extends React.Component {
+// 	render() {
+// 		return <div className="search-books">{/* UI code */}</div>;
+// 	}
+// }
 
 // 	<div className="search-books">
 // 		<div className="search-books-bar">
