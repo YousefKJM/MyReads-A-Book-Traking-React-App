@@ -48,7 +48,9 @@ class BooksApp extends React.Component {
 								onBookShelfChange={this.moveBookShelf}
 							/>
 							<div className="open-search">
-								<Link to="/search">Add a book</Link>
+								<Link className="addBtn" to="/search">
+									Add a book
+								</Link>
 							</div>
 						</div>
 					)}
