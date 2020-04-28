@@ -1,6 +1,14 @@
 # MyReads-A-Book-Traking-React-App
 
-In the MyReads project, I created a bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read, it also allow you to search for books based on title and author.
+In the MyReads project, I have created a bookshelf app that can be used to search for book titles and store them on different shelves depending on what you are currently reading, what you have read and what you would like to read.
+
+In nutshel, MyReads is a simple cataloging app that allows you to place books in one of three shelves or categories.
+
+- Currently Reading
+- Want to Read
+- Read
+
+It also allow you to search for books based on title and author.
 
 The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
