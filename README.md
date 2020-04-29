@@ -2,7 +2,7 @@
 
 In the MyReads project, I have created a bookshelf app that can be used to search for book titles and store them on different shelves depending on what you are currently reading, what you have read and what you would like to read.
 
-In nutshel, MyReads is a simple cataloging app that allows you to place books in one of three shelves or categories.
+In nutshell, MyReads is a simple cataloging app that allows you to place books in one of three shelves or categories.
 
 - Currently Reading
 - Want to Read
